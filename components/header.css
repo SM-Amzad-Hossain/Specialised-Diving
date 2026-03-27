@@ -1,11 +1,31 @@
 .header {
-  position: absolute;
+  position: fixed; /* Changed to fixed for sticky effect */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   padding: 30px 0;
   background-color: transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism Effect when Scrolled */
+.header.scrolled {
+  padding: 15px 0;
+  background: rgba(27, 41, 145, 0.7); /* Primary blue with transparency */
+  backdrop-filter: blur(12px); /* Glass blur effect */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled .logo img {
+  max-height: 70px;
+  transform: scale(1);
+}
+
+.header.scrolled .logo img:hover {
+  transform: scale(1.1); /* Slightly larger zoom when header is sticky */
 }
 
 .header .container {
@@ -20,6 +40,13 @@
 .header .logo img {
   max-height: 100px;
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform, max-height;
+}
+
+.header .logo img:hover {
+  transform: scale(1.08) rotate(-2deg); /* Subtle smooth transform on hover */
+  filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.3));
 }
 
 .header .nav ul {

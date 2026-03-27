@@ -15,8 +15,50 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Load header and footer
-  loadComponent("./components/header.html", "header-placeholder");
-  loadComponent("./components/footer.html", "footer-placeholder");
+  const loadHeaderFooter = async () => {
+    await loadComponent("./components/header.html", "header-placeholder");
+    await loadComponent("./components/footer.html", "footer-placeholder");
+
+    // Initialize Scroll Effect for Header after loading
+    initHeaderScroll();
+    // Initialize Scroll Reveal for all sections
+    initScrollReveal();
+  };
+
+  loadHeaderFooter();
+
+  function initHeaderScroll() {
+    const header = document.querySelector(".header");
+    if (!header) return;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  }
+
+  function initScrollReveal() {
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target); // Reveal only once
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(".reveal").forEach((el) => {
+      observer.observe(el);
+    });
+  }
 
   // Initialize Swiper
   const swiper = new Swiper(".hero-swiper", {
