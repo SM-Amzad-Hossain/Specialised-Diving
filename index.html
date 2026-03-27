@@ -13,7 +13,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@700;800;900&family=Nunito+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./components/header.css" />
@@ -34,8 +34,8 @@
                 class="hero-bg"
                 style="
                   background-image:
-                    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                    url(&quot;./assets/images/hero1.jpg&quot;);
+                    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                    url(&quot;./assets/images/UNDERWATER SURVEY & REPAIR EXPERTS.webp&quot;);
                 "
               ></div>
               <div class="container">
@@ -61,8 +61,8 @@
                 class="hero-bg"
                 style="
                   background-image:
-                    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                    url(&quot;./assets/images/hero2.jpg&quot;);
+                    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                    url(./assets/images/hero2-new.jpg);
                 "
               ></div>
               <div class="container">
@@ -84,8 +84,8 @@
                 class="hero-bg"
                 style="
                   background-image:
-                    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                    url(&quot;./assets/images/hero3.jpg&quot;);
+                    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                    url(&quot;./assets/images/pool-repair-hero.jpg&quot;);
                 "
               ></div>
               <div class="container">
@@ -118,29 +118,30 @@
       </section>
 
       <!-- About Section -->
-      <section class="about reveal">
+      <section class="about blue-bg reveal">
         <div class="container">
           <h2>Commercial and Specialised-Diving</h2>
           <p>
-            Formed in 1999, incorporated in 2002 and operating for almost 20
+            Formed in 1995, incorporated in 2003 and operating for almost 30
             years, Commercial and Specialised Diving provide a wide range of
             commercial, swimming pool, equipment hire and TV services across the
             diving spectrum and has a reputation for providing a quality,
             professional service with highly competitive rates.
           </p>
           <p>
-            Our project managers are experienced and HSE accredited dive
-            supervisors, possessing HSE compliant dive teams that have a wealth
+            Our project managers are experienced and ADC accredited dive
+            supervisors, overseeing HSE compliant dive teams that have a wealth
             of experience across many fields of diving, with backgrounds from
             the offshore industry, armed forces, rescue services, underwater
             construction industry and more.
           </p>
           <p>
-            We are able to provide 24/7 services nationwide, to minimize
-            disruption for your business plus a rapid response nationwide
+            We are able to provide 24/7 services, nationwide, to minimize
+            disruption to your business plus a rapid response nationwide
             emergency call out service.
           </p>
         </div>
+        <!-- Wave Divider - Rising smooth curve from left to right -->
       </section>
 
       <!-- Services Section 1: Our Services -->
@@ -189,14 +190,6 @@
       </section>
 
       <!-- Wave Divider -->
-      <div class="wave-divider">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path
-            d="M0,60 C300,120 900,120 1200,60 L1200,120 L0,120 Z"
-            class="wave-to-blue"
-          ></path>
-        </svg>
-      </div>
 
       <!-- Services Section 2: Swimming Pool Repairs -->
       <section class="service-block blue-bg reveal">
@@ -253,14 +246,6 @@
       </section>
 
       <!-- Wave Divider -->
-      <div class="wave-divider">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path
-            d="M0,60 C300,120 900,120 1200,60 L1200,0 L0,0 Z"
-            class="wave-to-white"
-          ></path>
-        </svg>
-      </div>
 
       <!-- Services Section 3: Equipment Hire -->
       <section class="service-block reveal">
@@ -308,17 +293,9 @@
       </section>
 
       <!-- Wave Divider -->
-      <div class="wave-divider">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path
-            d="M0,60 C300,120 900,120 1200,60 L1200,120 L0,120 Z"
-            class="wave-to-blue"
-          ></path>
-        </svg>
-      </div>
 
       <!-- Services Section 4: Film And TV Services -->
-      <section class="service-block blue-bg reveal">
+      <section class="service-block blue-bg reveal film-tv-services">
         <div class="container">
           <div class="service-row reverse">
             <div class="service-image">
@@ -369,66 +346,97 @@
       </section>
 
       <!-- Wave Divider -->
-      <div class="wave-divider">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path
-            d="M0,60 C300,120 900,120 1200,60 L1200,0 L0,0 Z"
-            class="wave-to-white"
-          ></path>
-        </svg>
-      </div>
 
       <!-- Testimonials Section -->
       <section class="testimonials reveal">
         <div class="container">
           <h2>Recent Testimonials</h2>
-          <div class="testimonial-grid">
-            <div class="testimonial-card">
-              <div class="stars">★★★★★</div>
-              <p>
-                I would also like to take this opportunity to thank you for
-                responding to and assist in the effort who have completed a
-                fantastic job. The pool is now open and looks instead. In our
-                own critical standard.
-              </p>
-              <p class="author">
-                <strong>Max Silvestri</strong> - A Performance Leisure Centre
-              </p>
+          <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper">
+              <!-- Testimonial 1 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="stars">★★★★★</div>
+                  <p>
+                    I would also like to take this opportunity to thank you for
+                    organising this and also to the divers who have completed a
+                    fantastic job, the pool looks great and has been noticed by
+                    our very critical members!
+                  </p>
+                  <div class="testimonial-info">
+                    <p class="author">Miss S.Moulds</p>
+                    <p class="company">A Portsmouth Leisure Centre</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 2 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="stars">★★★★★</div>
+                  <p>
+                    Just to let you know that the guy's did an amazing job with
+                    our relax pool and we have been getting some great feedback
+                    on it!!! – Thank you
+                  </p>
+                  <div class="testimonial-info">
+                    <p class="author">Mr D.Nuth</p>
+                    <p class="company">A London Leisure Centre</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 3 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="stars">★★★★★</div>
+                  <p>
+                    These reports are great, thank you for the works carried
+                    out. I will work quickly to action the other recommendations
+                    raised.
+                  </p>
+                  <div class="testimonial-info">
+                    <p class="author">Mr C.Wells</p>
+                    <p class="company">A Sutton Leisure Centre</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 4 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="stars">★★★★★</div>
+                  <p>
+                    A very professional team. They completed the underwater
+                    repairs ahead of schedule and within budget. Highly
+                    recommended!
+                  </p>
+                  <div class="testimonial-info">
+                    <p class="author">Mr J. Smith</p>
+                    <p class="company">A Suffolk School Centre</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 5 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="stars">★★★★★</div>
+                  <p>
+                    Excellent service from start to finish. The divers were
+                    extremely knowledgeable and helpful throughout the entire
+                    process.
+                  </p>
+                  <div class="testimonial-info">
+                    <p class="author">Mr R. Taylor</p>
+                    <p class="company">A Regional Sports Complex</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="testimonial-card">
-              <div class="stars">★★★★★</div>
-              <p>
-                Just to let you know that the pool is back on and people are
-                with our value pool and we have been getting very good feedback
-                so far!!! Thank you,
-              </p>
-              <p class="author">
-                <strong>Mr O'Keefe</strong> - A London Leisure Centre
-              </p>
-            </div>
-            <div class="testimonial-card">
-              <div class="stars">★★★★★</div>
-              <p>
-                These boys are great, thank you for the work carried out. I will
-                not quickly be within the other recommendation. many thanks.
-              </p>
-              <p class="author">
-                <strong>Mr J Smith</strong> - A Suffolk School Centre
-              </p>
-            </div>
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
 
-      <!-- Wave Divider -->
-      <div class="wave-divider">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path
-            d="M0,0 C400,120 800,120 1200,0 L1200,120 L0,120 Z"
-            class="wave-to-blue"
-          ></path>
-        </svg>
-      </div>
+      <!-- Wave Divider before Footer -->
     </main>
 
     <div id="footer-placeholder"></div>

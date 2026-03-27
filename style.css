@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
   overflow-x: hidden;
@@ -52,8 +52,25 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: "Mulish", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 /* Buttons */
@@ -154,6 +171,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%; /* Ensure slide takes full height */
 }
 
 .hero-bg {
@@ -179,8 +197,31 @@ h4 {
   max-width: 900px;
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 120px;
   perspective: 1000px; /* For potential 3D smooth effects */
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  margin-bottom: 30px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-size: 80px;
+}
+
+.hero .description {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
 }
 
 /* Slide Content Animations */
@@ -247,25 +288,63 @@ h4 {
 
 /* About Section */
 .about {
-  padding: 140px 0 100px;
+  padding: 160px 0 120px;
   text-align: center;
   background-color: var(--bg-light);
+  position: relative;
+}
+
+.about.blue-bg {
+  background-image: url("./assets/images/Commercial and specialised-diving.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: for a subtle parallax effect */
+  color: var(--text-light);
+  padding-top: 140px;
+  padding-bottom: 260px;
 }
 
 .about h2 {
-  font-size: 48px;
+  font-size: 40px; /* Perfectly match image proportion */
   margin-bottom: 40px;
   color: var(--primary-blue);
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  text-transform: none;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.about.blue-bg h2 {
+  color: var(--text-light);
 }
 
 .about p {
-  max-width: 1100px;
-  margin: 0 auto 30px;
-  font-size: 18px;
+  max-width: 850px; /* Perfectly match image text container width */
+  margin: 0 auto 35px;
+  font-size: 16px;
   color: #444;
   line-height: 1.8;
+  font-weight: 500;
+}
+
+.about.blue-bg p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.about-wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 10;
+}
+
+.about-wave svg {
+  display: block;
+  width: 100%;
+  height: 180px; /* Tall smooth wave like image */
+  fill: var(--bg-light);
 }
 
 /* Service Blocks */
@@ -277,6 +356,14 @@ h4 {
 .service-block.blue-bg {
   background-color: var(--bg-blue);
   color: var(--text-light);
+}
+
+.service-block.film-tv-services {
+  background-image: url("./assets/images/Film and TV Services.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .service-block.blue-bg h3 {
@@ -320,8 +407,8 @@ h4 {
   width: 45%;
   height: 250px;
   object-fit: cover;
-  border-radius: 60px 0 60px 0;
-  border: 10px solid #fff;
+  border-radius: 0 0 138px 0;
+  border: 10px solid var(--bg-light-blue);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   bottom: -40px;
   right: 0;
@@ -330,17 +417,15 @@ h4 {
 }
 
 .blue-bg .overlap-img {
-  border-color: var(--primary-blue);
+  border-color: var(--bg-light-blue);
 }
 
 .service-row.reverse .main-img {
-  border-radius: 0 120px 0 120px;
+  /* Removed override to keep consistency */
 }
 
 .service-row.reverse .overlap-img {
-  border-radius: 0 60px 0 60px;
-  left: 0;
-  right: auto;
+  /* Removed override to keep consistency */
 }
 
 .service-image:hover .main-img {
@@ -406,68 +491,108 @@ h4 {
 }
 
 .check-list li::before {
-  content: "●";
+  content: "";
   position: absolute;
   left: 0;
-  color: var(--primary-yellow);
-  font-size: 18px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  background-image: url("./assets/icon/checkmark.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Testimonials */
 .testimonials {
   padding: 140px 0;
   background-color: var(--bg-light);
-  background-image: url("https://www.transparenttextures.com/patterns/world-map.png");
+  background-image: url("./assets/images/bg-appointment 1.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .testimonials h2 {
   text-align: center;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   color: var(--primary-blue);
-  font-size: 48px;
-  text-transform: uppercase;
+  font-size: 40px;
+  text-transform: none;
 }
 
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+.testimonials-swiper {
+  padding-bottom: 60px !important;
+  display: flex;
+}
+
+.testimonials-swiper .swiper-wrapper {
+  align-items: stretch; /* This makes all slides equal height */
+}
+
+.testimonials-swiper .swiper-slide {
+  height: auto; /* Allow swiper-wrapper stretch to work */
+  display: flex;
 }
 
 .testimonial-card {
   background: #ffffff;
-  padding: 50px 40px;
-  border-radius: 12px;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
-  border-top: 8px solid var(--primary-yellow);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-10px);
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  width: 100%; /* Changed from 380px to 100% to fit 3 slides */
+  height: 350px; /* Fixed height for consistency */
+  margin: 0 auto; /* Center card within slide */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent text overflow if content is too long */
 }
 
 .stars {
   color: var(--primary-yellow);
-  margin-bottom: 25px;
-  font-size: 22px;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .testimonial-card p {
-  font-style: italic;
   color: #555;
-  margin-bottom: 30px;
-  font-size: 16px;
+  margin-bottom: 25px;
+  font-size: 15px;
   line-height: 1.8;
+  flex-grow: 1;
 }
 
-.testimonial-card .author {
-  font-style: normal;
+.testimonial-info {
+  margin-top: auto;
+}
+
+.testimonial-info .author {
   font-size: 16px;
   color: var(--primary-blue);
   font-weight: 800;
-  text-transform: uppercase;
+  margin-bottom: 2px;
+  text-transform: none;
+}
+
+.testimonial-info .company {
+  font-size: 14px;
+  color: #777;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* Custom Swiper Pagination for Testimonials */
+.testimonials-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--primary-yellow);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--primary-blue);
+  width: 12px;
+  height: 12px;
 }
